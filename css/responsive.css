@@ -1,5 +1,3 @@
-/* Добавьте это в responsive.css */
-
 @media (max-width: 768px) {
     /* Базовые настройки */
     html {
@@ -11,1185 +9,177 @@
         padding: 0 5%;
         box-sizing: border-box;
     }
-    
+
     /* Шапка */
     header {
-        height: auto;
-        padding: 3% 0;
-        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+        z-index: 1000;
     }
-    
+
     .vector-photo {
-        width: 25vw;
+        width: 50px;
         height: auto;
-        max-width: 120px;
     }
-    
+
+    /* Навигация */
     nav {
-        width: 100%;
-        margin-top: 3%;
+        display: flex;
+        align-items: center;
     }
-    
+
     nav ul {
         display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: rgba(24, 24, 35, 0.98);
+        padding: 20px 0;
         flex-direction: column;
-        background-color: #181823;
-        width: 100%;
-        padding: 2% 0;
+        align-items: center;
+        z-index: 1000;
+        animation: slideDown 0.3s ease-out;
     }
-    
+
     nav ul.open {
         display: flex;
     }
-    
+
     nav li {
-        display: block;
+        width: 90%;
         text-align: center;
-        border: none;
-        padding: 2% 0;
+        padding: 12px 0;
     }
-    
+
     nav li a {
-        font-size: 4vw;
-        line-height: 1.5;
-        margin: 0;
-        padding: 2%;
+        font-size: 18px;
+        color: white;
+        display: block;
+        padding: 8px 0;
     }
-    
+
+    /* Кнопка меню */
     nav a#pull {
         display: block;
-        position: absolute;
-        top: 3%;
-        right: 5%;
     }
-    
+
     nav a#pull img {
-        height: 8vw;
-        max-height: 40px;
+        width: 24px;
+        height: 24px;
     }
-    
-    /* Обо мне */
+
+    /* Основной контент */
+    main {
+        margin-top: 60px;
+    }
+
+    /* Секция "Обо мне" */
     .about-section {
         flex-direction: column;
-        height: auto;
-        padding-top: 5%;
+        padding-top: 40px;
     }
-    
-    .photo-rectangle {
-        width: 90%;
-        margin: 0 auto;
-    }
-    
+
     .about-photo {
-        position: static;
         width: 100%;
-        height: auto;
         max-width: 300px;
-        margin: 0 auto 5%;
-        display: block;
+        margin: 0 auto 20px;
     }
-    
-    .about-text-rectangle {
-        position: static;
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
+
     .about-text {
-        font-size: 8vw;
-        line-height: 1.2;
+        font-size: 2rem;
         text-align: center;
+        line-height: 1.3;
     }
-    
+
     .about-text-add {
-        font-size: 3.5vw;
+        font-size: 1rem;
         text-align: center;
-        margin: 5% auto;
+        margin: 20px auto;
         width: 90%;
     }
-    
-    /* Навыки */
+
+    /* Секция "Навыки" */
     .skillset-section {
         flex-direction: column;
-        height: auto;
-        padding: 5% 0;
+        padding: 40px 0;
     }
-    
-    .skillset-rectangle {
-        width: 90%;
-        margin: 5% auto 0;
-        text-align: center;
-    }
-    
-    .skillset-text {
-        font-size: 7vw;
-    }
-    
-    .skillset-text-add {
-        font-size: 3.5vw;
-        width: 90%;
-        margin: 3% auto;
-    }
-    
-    .first-line, .second-line {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .programming-languages, 
-    .web-development, 
-    .languages, 
-    .other {
-        width: 90%;
-        padding: 5% 0;
-        text-align: center;
-    }
-    
-    .skillset-photo, .skillset-photo-last {
-        width: 8vw;
-        max-width: 35px;
-    }
-    
-    .programming-languages-text, 
-    .web-development-text, 
-    .languages-text, 
-    .other-text {
-        font-size: 5vw;
-        margin-top: 3%;
-    }
-    
-    .programming-languages-text-add, 
-    .web-development-text-add, 
-    .languages-text-add, 
-    .other-text-add {
-        width: 90%;
-        font-size: 3.5vw;
-        margin: 3% auto;
-    }
-    
-    .skillset-footer {
-        flex-direction: column;
-        padding: 5% 0;
-    }
-    
-    .skillset-footer-first-half, 
-    .skillset-footer-second-half {
-        flex-direction: row;
-        justify-content: center;
-        margin: 3% 0;
-        width: 100%;
-    }
-    
-    .skillset-footers1, .skillset-footers2 {
-        width: 45%;
-        height: auto;
-    }
-    
-    .skillset-footers-photo {
-        width: 20vw;
-        max-width: 100px;
-        margin: 0 auto;
-        display: block;
-    }
-    
-    /* Опыт */
-    .experience-section {
-        padding: 10% 0;
-    }
-    
-    .experience-section-text {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .experience-section-add-text {
-        font-size: 3.5vw;
-    }
-    
-    .experience-section-main-text {
-        width: 100%;
-        font-size: 7vw;
-        text-align: center;
-    }
-    
-    .experience-rectangle {
-        flex-direction: column;
-        padding: 5% 0;
-        width: 90%;
-        margin: 0 auto;
-    }
-    
-    .experience-items {
-        width: 100%;
-        margin-bottom: 8%;
-        text-align: center;
-    }
-    
-    .experience-items img {
-        width: 15vw;
-        max-width: 60px;
-    }
-    
-    .experience-items-main-text {
-        font-size: 5vw;
-        margin-top: 5%;
-    }
-    
-    .experience-items-add-text {
-        font-size: 3.5vw;
-        margin-top: 3%;
-    }
-    
-    /* Проекты */
-    .projects-section {
-        padding: 10% 0;
-    }
-    
-    .projects-section-text {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .projects-section-add-text {
-        font-size: 3.5vw;
-    }
-    
-    .projects-section-main-text {
-        font-size: 7vw;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .projects {
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        margin: 0 auto;
-    }
-    
-    .youTube-downloader-bot, 
-    .converter-bot, 
-    .web-site, 
-    .soon-projects {
-        width: 100%;
-        margin: 5% 0;
-    }
-    
-    .projects-photo img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .projects-text {
-        width: 100%;
-        padding: 5%;
-        box-sizing: border-box;
-    }
-    
-    .projects-main-text {
-        font-size: 5vw;
-    }
-    
-    .projects-add-text {
-        font-size: 3.5vw;
-    }
-    
-    .projects-icons {
-        width: 5vw;
-        max-width: 24px;
-    }
-    
-    .viev-all-projects {
-        width: 100%;
-        margin: 5% 0;
-    }
-    
-    .viev-all-projects-button {
-        position: relative;
-        width: 80%;
-        height: 12vw;
-        max-height: 60px;
-        margin: 0 auto;
-    }
-    
-    .viev-all-projects-button-press {
-        font-size: 3.5vw;
-        height: 100%;
-    }
-    
-    /* Контакты */
-    .contact {
-        flex-direction: column;
-        height: auto;
-        padding: 10% 0;
-    }
-    
-    .contact-text {
-        width: 90%;
-        margin: 0 auto 8%;
-        text-align: center;
-    }
-    
-    .contact-main-text {
-        font-size: 7vw;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .contact-add-text {
-        font-size: 3.5vw;
-        width: 100%;
-    }
-    
-    .contact-input {
-        width: 90%;
-        margin: 0 auto;
-        height: auto;
-    }
-    
-    .contact-input-name,
-    .contact-input-email,
-    .contact-input-message {
-        width: 100%;
-        font-size: 3.5vw;
-    }
-    
-    .contact-input-name-input,
-    .contact-input-email-input,
-    .contact-input-message-input {
-        width: 100%;
-        height: 10vw;
-        max-height: 50px;
-        font-size: 4vw;
-        box-sizing: border-box;
-    }
-    
-    .contact-input-message-input {
-        height: 20vw;
-        max-height: 100px;
-    }
-    
-    .contact-input-button {
-        position: relative;
-        width: 100%;
-        height: 12vw;
-        max-height: 60px;
-        margin-top: 5%;
-    }
-    
-    .contact-input-button-text {
-        font-size: 3.5vw;
-        height: 100%;
-    }
-    
-    /* Футер */
-    .contact-footer {
-        height: auto;
-        padding: 8% 0;
-    }
-    
-    .contact-left-block {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .vector-footer img {
-        width: 40vw;
-        max-width: 200px;
-        height: auto;
-    }
-    
-    .social-networks {
-        margin: 5% auto 0;
-    }
-    
-    .telegram-image,
-    .whatsapp-image {
-        width: 8vw;
-        max-width: 40px;
-    }
-    
-    .github-image {
-        height: 8vw;
-        max-height: 40px;
-        width: auto;
-    }
-}
 
-/* Для очень маленьких экранов */
-@media (max-width: 360px) {
-    .about-text {
-        font-size: 9vw;
+    .skillset-text {
+        font-size: 2rem;
+        text-align: center;
     }
-    
-    .skillset-text,
+
+    .first-line, 
+    .second-line {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Остальные секции */
+    .experience-section,
+    .projects-section,
+    .contact {
+        padding: 40px 0;
+    }
+
     .experience-section-main-text,
     .projects-section-main-text,
     .contact-main-text {
-        font-size: 8vw;
+        font-size: 2rem;
+        text-align: center;
     }
-    
-    .about-text-add,
-    .skillset-text-add,
-    .experience-items-add-text,
-    .projects-add-text,
-    .contact-add-text {
-        font-size: 4vw;
-    }
-}
 
-/* Мобильное меню поверх контента */
-@media (max-width: 768px) {
-    nav {
-        position: relative;
-        z-index: 100;
-        width: 100%;
-        margin-top: 3%;
-    }
-    
-    nav ul {
-        display: none;
+    /* Проекты */
+    .projects {
         flex-direction: column;
-        background-color: rgba(24, 24, 35, 0.98);
+        gap: 20px;
+    }
+
+    .youTube-downloader-bot,
+    .converter-bot,
+    .web-site,
+    .soon-projects {
         width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 2% 0;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
     }
-    
-    nav ul.open {
-        display: flex;
-        animation: slideDown 0.3s ease-out;
+
+    .projects-text {
+        width: 100%;
+        padding: 15px;
     }
-    
+
+    /* Футер */
+    .contact-footer {
+        padding: 40px 0;
+    }
+
+    /* Анимации */
     @keyframes slideDown {
         from {
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateY(-20px);
         }
         to {
             opacity: 1;
             transform: translateY(0);
         }
     }
-    
-    nav li {
-        display: block;
-        text-align: center;
-        border: none;
-        padding: 3% 0;
-    }
-    
-    nav li a {
-        font-size: 4.5vw;
-        line-height: 1.5;
-        margin: 0;
-        padding: 3% 5%;
-        display: block;
-        color: white;
-        transition: background-color 0.2s;
-    }
-    
-    nav li a:hover {
-        background-color: rgba(82, 33, 230, 0.2);
-    }
-    
-    nav a#pull {
-        display: block;
-        position: absolute;
-        top: -50px;
-        right: 5%;
-        z-index: 1100;
-        background: #5221E6;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    
-    nav a#pull img {
-        height: 7vw;
-        max-height: 30px;
-        filter: brightness(0) invert(1);
-    }
-    
-    body.menu-open::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 900;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-    
-    body.menu-open::after {
-        opacity: 1;
-        pointer-events: auto;
-    }
 }
-
-@media (max-width: 768px) {
-    /* Обновленные стили для уменьшенной навигации */
-    nav {
-        height: 60px;
-        margin-top: 0;
-    }
-    
-    nav ul {
-        top: 60px;
-    }
-    
-    nav a#pull {
-        top: 10px;
-        right: 15px;
-        padding: 8px;
-        background: transparent;
-    }
-    
-    nav a#pull img {
-        height: 24px;
-        width: 24px;
-        max-height: none;
-        filter: none;
-    }
-    
-    .vector-photo {
-        width: 80px;
-        height: auto;
-        margin: 5px 0;
-    }
-
-    nav a#pull {
-        transition: transform 0.3s;
-    }
-    
-    body.menu-open nav a#pull {
-        transform: rotate(90deg);
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 5%;
-    }
-    
-    .vector {
-        display: flex;
-        align-items: center;
-    }
-    
-    nav {
-        margin-top: 0;
-        height: auto;
-    }
-    
-    nav a#pull {
-        position: static;
-        top: auto;
-        right: auto;
-        transform: none;
-    }
-    
-    /* Убедитесь, что лого и меню выровнены по центру */
-    .vector-photo {
-        margin: 0;
-        align-self: center;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Шапка */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 60px;
-        padding: 0 5%;
-        position: relative;
-    }
-    
-    .vector {
-        display: flex;
-        align-items: center;
-        height: 100%;
-    }
-    
-    .vector-photo {
-        width: 60px;
-        height: auto;
-        margin: 0;
-    }
-    
-    nav {
-        width: auto;
-        margin: 0;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-    
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(24, 24, 35, 0.98);
-        width: 100%;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        padding: 2% 0;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-    }
-    
-    nav ul.open {
-        display: flex;
-        animation: slideDown 0.3s ease-out;
-    }
-    
-    nav a#pull {
-        display: block;
-        padding: 0;
-        background: transparent;
-        position: static;
-    }
-    
-    nav a#pull img {
-        height: 24px;
-        width: 24px;
-    }
-    
-    
-}
-
-@media (max-width: 768px) {
-    /* Шапка */
-    /*
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 60px;
-        padding: 0 5%;
-        position: relative;
-    }
-    */
-
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        height: 60px;
-    }
-
-    /* Стили для логотипа */
-    .vector-photo {
-        width: 60px;
-        height: auto;
-    }
-
-    /* Основные стили меню */
-    nav ul {
-        display: none;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: rgba(24, 24, 35, 0.98);
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px 0;
-        text-align: center;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-    }
-
-    nav ul.open {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        animation: slideDown 0.3s ease-out;
-    }
-
-    nav li {
-        width: 100%;
-        padding: 12px 0;
-    }
-
-    nav li a {
-        display: block;
-        width: 100%;
-        font-size: 18px;
-        color: white;
-        padding: 8px 0;
-        text-decoration: none;
-    }
-
-    /* Кнопка меню */
-    nav a#pull {
-        display: block;
-        background: transparent;
-    }
-
-    nav a#pull img {
-        height: 24px;
-        width: 24px;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Основные стили шапки */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000; /* Черный непрозрачный фон */
-    z-index: 1000;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    box-sizing: border-box;
-}
-
-/* Стили для мобильной версии */
-@media (max-width: 768px) {
-    header {
-        height: 60px;
-    }
-    
-    .vector-photo {
-        width: 50px;
-        height: auto;
-    }
-    
-    nav a#pull img {
-        height: 24px;
-        width: 24px;
-    }
-    
-    nav ul {
-        top: 60px; /* Располагаем под шапкой */
-        background-color: #000; /* Черный фон для меню */
-    }
-}
-
-/* Отступ для основного содержимого */
-main {
-    padding-top: 80px; /* Для десктопной версии */
-}
-
-@media (max-width: 768px) {
-    main {
-        padding-top: 60px; /* Для мобильной версии */
-    }
-}
-
-/* Фиксированная черная шапка */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background-color: #000; /* Чистый черный */
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Основной контент начинается под шапкой */
-main {
-    margin-top: 80px; /* Высота шапки */
-    position: relative;
-    z-index: 1;
-}
-
-/* Мобильная версия */
-@media (max-width: 768px) {
-    header {
-        height: 60px;
-    }
-    
-    main {
-        margin-top: 60px;
-    }
-    
-    nav ul {
-        top: 60px;
-        background-color: #000; /* Черный фон для меню */
-    }
-    
-    .vector-photo {
-        width: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Берем ширину projects-text */
-    .projects-text {
-        width: 90%;
-        margin: 0 auto;
-        padding: 5%;
-    }
-    
-    /* Применяем такие же размеры для кнопки */
-    .viev-all-projects {
-        width: 90%; /* Та же ширина что и у projects-text */
-        margin: 5% auto; /* Такие же отступы */
-        padding: 0 5%; /* Такие же внутренние отступы */
-        box-sizing: border-box;
-    }
-    
-    .viev-all-projects-button {
-        width: 100%;
-    }
-    
-    .viev-all-projects-button-press {
-        width: 100%;
-        max-width: none; /* Убираем ограничение максимальной ширины если есть */
-    }
-}
-
-/* Стили для формы */
-.contact-input {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.contact-input-name-input,
-.contact-input-email-input,
-.contact-input-message-input {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.contact-input-message-input {
-    height: 120px;
-    resize: vertical;
-}
-
-.contact-input-button {
-    width: 100%;
-    background: #5221E6;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-}
-
-.contact-input-button:hover {
-    background: #3a1a9c;
-}
-
-
-/* Стили для кнопки отправки */
-.contact-input-button {
-    width: 100%;
-    background: #5221E6;
-    color: white;
-    border: none;
-    padding: 15px 0;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Sen', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-}
-
-.contact-input-button:hover {
-    background: #3a1a9c;
-    transform: translateY(-2px);
-}
-
-.contact-input-button-text {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-
-@media (max-width: 768px) {
-    .contact-input-button {
-        height: 12vw;
-        max-height: 60px;
-        font-size: 3.5vw;
-        margin: auto;
-    }
-    
-    .contact-input-button-text {
-        line-height: 12vw;
-        max-height: 60px;
-    }
-}
-
-
-/* Стили для состояния ошибки */
-.contact-input-name-input:invalid,
-.contact-input-email-input:invalid,
-.contact-input-message-input:invalid {
-    border-color: #ff4444;
-}
-
-.contact-input-button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-/* Стили статуса формы */
-.form-status {
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 4px;
-    display: none;
-}
-
-.form-status.success {
-    display: block;
-    background-color: #4CAF50;
-    color: white;
-}
-
-.form-status.error {
-    display: block;
-    background-color: #f44336;
-    color: white;
-}
-
-/* Стили для disabled состояния */
-.contact-input-button:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-
-@media (max-width: 768px) {
-    /* Единые отступы */
-    section, .section-like {
-        padding: 40px 5%;
-    }
-    
-    /* Кнопки на всю ширину */
-    .contact-input-button, 
-    .viev-all-projects-button {
-        max-width: 100%;
-        margin: 5% auto; 
-        padding: 0 5%; 
-    }
-    
-    /* Уменьшаем заголовки */
-    .about-text, 
-    .skillset-text, 
-    .experience-section-main-text, 
-    .projects-section-main-text, 
-    .contact-main-text {
-        font-size: 2rem;
-        line-height: 1.3;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .projects {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 100%;
-    }
-
-    .youTube-downloader-bot,
-    .converter-bot,
-    .web-site,
-    .soon-projects {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        background: #181823;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    .projects-photo img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        aspect-ratio: 16/9; /* Сохраняем пропорции как у фотографий */
-    }
-
-    .projects-text {
-        padding: 15px;
-        width: calc(100% - 30px); /* Ширина минус отступы */
-        box-sizing: border-box;
-    }
-
-    .projects-main-text {
-        font-size: 1.2rem;
-        margin-bottom: 8px;
-        line-height: 1.4;
-    }
-
-    .projects-add-text {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.7);
-    }
-
-    .projects-icons {
-        width: 20px;
-        margin-left: 5px;
-        vertical-align: middle;
-    }
-}
-
-@media (max-width: 768px) {
-    .projects-text {
-        min-height: 120px; /* Фиксированная высота текстового блока */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    /* Сохраняем пропорции как у фото */
-    .project-card {
-        aspect-ratio: 1/1.2; /* Высота чуть больше ширины */
-    }
-}
-
-
 
 @media (max-width: 480px) {
-    .projects-text {
-        padding: 12px;
-        min-height: 110px;
-    }
-    
-    .projects-main-text {
-        font-size: 1.1rem;
-    }
-    
-    .projects-add-text {
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Базовые настройки сетки проектов */
-    .projects {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        width: 100%;
-        padding: 0 5%;
-        box-sizing: border-box;
-    }
-
-    /* Карточка проекта */
-    .youTube-downloader-bot,
-    .converter-bot,
-    .web-site,
-    .soon-projects {
-        width: 100%;
-        background: #181823;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    /* Фотографии (естественная ширина без обрезки) */
-    .projects-photo img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    /* Текстовый блок (точно под фотографией) */
-    .projects-text {
-        width: 100%;
-        padding: 15px;
-        box-sizing: border-box;
-        background: #181823; /* Фон как у карточки */
-    }
-
-    /* Заголовок проекта */
-    .projects-main-text {
-        font-size: 1.3rem;
-        margin-bottom: 10px;
-        display: inline-block;
-    }
-
-    /* Описание проекта */
-    .projects-add-text {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* Иконка ссылки */
-    .projects-icons {
-        width: 18px;
-        margin-left: 6px;
-        vertical-align: middle;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Единые отступы для всех элементов */
-    .projects-photo, 
-    .projects-text {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-    /* Гибкие отступы текста */
-    .projects-text {
-        padding-top: 12px;
-        padding-bottom: 20px;
-    }
-    
-    /* Адаптивный размер шрифта */
-    .projects-main-text {
-        font-size: clamp(1.1rem, 4vw, 1.3rem);
-    }
-    
-    .projects-add-text {
-        font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+    .about-text,
+    .skillset-text,
+    .experience-section-main-text,
+    .projects-section-main-text,
+    .contact-main-text {
+        font-size: 1.8rem;
     }
 }
